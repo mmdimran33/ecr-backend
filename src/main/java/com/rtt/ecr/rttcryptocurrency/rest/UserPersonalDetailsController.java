@@ -36,6 +36,7 @@ public class UserPersonalDetailsController {
        //  UserPersonalDetailsEntity u= userPersonalDetailsService.userViewDetails(userName,userEmailId);
          //System.out.println("welcome::"+u.getUserEmailId());
         //return new ResponseEntity<>(HttpStatus.OK);
+         System.out.println("welcome::");
          return new ResponseEntity<>(userPersonalDetailsService.
                  userViewDetails(userName,userEmailId), HttpStatus.OK);
 
