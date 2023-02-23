@@ -6,11 +6,11 @@ import com.rtt.ecr.rttcryptocurrency.repo.RoleRepository;
 import com.rtt.ecr.rttcryptocurrency.repo.UserPersonalDetailsRepo;
 import com.rtt.ecr.rttcryptocurrency.service.UserPersonalDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
+//import org.springframework.mail.SimpleMailMessage;
+//import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.security.crypto.codec.Hex;
+//import org.springframework.security.crypto.codec.Hex;
 
 import java.util.Collections;
 
