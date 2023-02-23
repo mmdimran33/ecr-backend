@@ -24,8 +24,8 @@ public class UserPersonalDetailsServiceImpl implements UserPersonalDetailsServic
     private PasswordEncoder passwordEncoder;
 
 
-    @Autowired
-    private JavaMailSender emailSender;
+   /* @Autowired
+    private JavaMailSender emailSender;*/
 
     @Autowired
     private RoleRepository roleRepository;
@@ -34,7 +34,7 @@ public class UserPersonalDetailsServiceImpl implements UserPersonalDetailsServic
     public UserPersonalDetailsEntity saveUser(UserPersonalDetailsEntity userPersonalDetailsEntity) {
         Role roles=null;
         String sendUserPasswordToMail=userPersonalDetailsEntity.getUserPassword();
-        SimpleMailMessage message = new SimpleMailMessage();
+       // SimpleMailMessage message = new SimpleMailMessage();
         userPersonalDetailsEntity.setUserPassword(passwordEncoder.encode(userPersonalDetailsEntity.getUserPassword()));
         //Created and mapped with Admin Role
         if(userPersonalDetailsEntity.getUserEmailId().equalsIgnoreCase("imrantech333@gmail.com")){
@@ -45,12 +45,12 @@ public class UserPersonalDetailsServiceImpl implements UserPersonalDetailsServic
         }
         userPersonalDetailsEntity.setRoles(Collections.singleton(roles));
         UserPersonalDetailsEntity userPersonalEntity= userPersonalDetailsRepo.save(userPersonalDetailsEntity);
-        message.setFrom("hr@octavision.org");
+       /* message.setFrom("hr@octavision.org");
         message.setTo(userPersonalDetailsEntity.getUserEmailId());
         message.setSubject("!!!!!Welcome to Octavision onboarding Please find your User email id and Password!!!!!");
         message.setText("Your User email id:"+userPersonalDetailsEntity.getUserEmailId()
                 +",,,"+"and your User Password:"+ sendUserPasswordToMail);
-        emailSender.send(message);
+        emailSender.send(message);*/
         return userPersonalEntity;
     }
 
