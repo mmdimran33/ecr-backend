@@ -3,7 +3,6 @@ package com.rtt.ecr.rttcryptocurrency.constant;
 public class ApiConstants {
 
     public static final String API_VERSION_V1 = "/api/v1";
-
     public static final String URI_PERSONAL_DETAILS = "/personal-details";
     public static final String URI_USER_AUTH="/user-auth";
 
